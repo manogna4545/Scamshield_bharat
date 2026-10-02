@@ -333,6 +333,3 @@ Users should independently verify important financial information through truste
 └───────────────────────────────────────────────┘
 
 
-## 📬 Contact
-
-*(Add your contact details or project links here.)*
