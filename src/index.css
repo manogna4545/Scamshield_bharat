@@ -1,0 +1,178 @@
+/* =========================================================
+   SCAMSHIELD BHARAT - CORE DESIGN TOKENS & RESET
+========================================================= */
+
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color Palette - Light Default */
+  --bg-app: #f4f8ff;
+  --bg-gradient: linear-gradient(180deg, #f0f6ff 0%, #edf5fd 40%, #ffffff 100%);
+  --card-bg: #ffffff;
+  --card-bg-subtle: #f8fbff;
+  --card-bg-hover: #f1f6ff;
+
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-primary-light: #eff6ff;
+  --color-primary-border: #bfdbfe;
+
+  --border-light: #dbeafe;
+  --border-card: #e2e8f0;
+
+  --risk-low: #15803d;
+  --risk-low-bg: #dcfce7;
+  --risk-low-border: #86efac;
+
+  --risk-caution: #b45309;
+  --risk-caution-bg: #fef3c7;
+  --risk-caution-border: #fcd34d;
+
+  --risk-medium: #c2410c;
+  --risk-medium-bg: #ffedd5;
+  --risk-medium-border: #fdba74;
+
+  --risk-high: #b91c1c;
+  --risk-high-bg: #fee2e2;
+  --risk-high-border: #fca5a5;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 35px -10px rgba(29, 78, 216, 0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --bg-app: #0a0f1d;
+  --bg-gradient: linear-gradient(180deg, #070b16 0%, #0d1527 45%, #090e1c 100%);
+  --card-bg: #111a2e;
+  --card-bg-subtle: #16223b;
+  --card-bg-hover: #1b2a47;
+
+  --text-main: #f8fafc;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --color-primary-light: #1e293b;
+  --color-primary-border: #2563eb;
+
+  --border-light: #1e293b;
+  --border-card: #25334c;
+
+  --risk-low: #4ade80;
+  --risk-low-bg: #064e3b;
+  --risk-low-border: #059669;
+
+  --risk-caution: #fde047;
+  --risk-caution-bg: #451a03;
+  --risk-caution-border: #b45309;
+
+  --risk-medium: #fb923c;
+  --risk-medium-bg: #431407;
+  --risk-medium-border: #ea580c;
+
+  --risk-high: #f87171;
+  --risk-high-bg: #450a0a;
+  --risk-high-border: #dc2626;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Accessibility: Large Text */
+[data-access="large-text"] {
+  font-size: 114%;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+/* Accessibility: High Contrast */
+[data-access="high-contrast"] {
+  --border-card: #000000;
+  --border-light: #000000;
+  --shadow-lg: 0 0 0 2px #000000;
+  --text-main: #000000;
+  --text-body: #000000;
+}
+
+[data-theme="dark"][data-access="high-contrast"] {
+  --border-card: #ffffff;
+  --border-light: #ffffff;
+  --shadow-lg: 0 0 0 2px #ffffff;
+  --text-main: #ffffff;
+  --text-body: #f1f5f9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-app);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-body);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
