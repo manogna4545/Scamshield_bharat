@@ -1,5 +1,5 @@
 # 🛡️ ScamShield Bharat
-Live Demo: https://scamshield-bharat-nine.vercel.app/
+Live Demo: https://scamshieldbharat-psi.vercel.app/
 > **AI-Powered Financial Scam Awareness & Investor Safety Platform**  
 > **Pause. Check. Verify. Stay Safe.**
 
